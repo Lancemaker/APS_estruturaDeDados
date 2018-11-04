@@ -1,0 +1,5 @@
+
+public class Sheet {
+	String imagePath = "/home/lancemaker/Documents/Github/APS_estruturaDeDados/Animação/src/imagens/mario.png";
+
+}

@@ -1,0 +1,10 @@
+import javax.swing.JFrame;
+
+public class UserInterface {
+	public static void main(String[] args) {
+		System.out.println("test");
+		String imagePath = "/home/lancemaker/Documents/Github/APS_estruturaDeDados/Animação/src/imagens/mario.png";
+		JFrame frame = new JFrame("AnimaAe");
+		rame.setVisible(true);
+	}	
+}

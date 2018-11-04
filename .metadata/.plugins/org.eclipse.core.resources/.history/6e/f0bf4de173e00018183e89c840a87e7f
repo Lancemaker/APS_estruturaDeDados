@@ -1,0 +1,8 @@
+
+public class Node {
+	Sprite sprite;
+	Node node;
+	public Node(Sprite sprite) {
+		this.sprite =sprite;
+	}
+}

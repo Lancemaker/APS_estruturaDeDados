@@ -1,0 +1,6 @@
+
+public class Sprite {
+	int width;
+	int height;
+	Sheet sheet;
+}

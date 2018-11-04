@@ -1,0 +1,19 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+import javax.swing;
+
+public class UserInterface {
+	public static void main(String[] args) {
+		System.out.println("test");
+		String imagePath = "../imagens/mario.png";
+		try {
+			BufferedImage myPicture = ImageIO.read(new File(imagePath));
+			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+			JPanel jPanel = new JPanel();
+			jPanel.add(picLabel);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

@@ -1,0 +1,7 @@
+
+public class Node {
+	Sprite sprite;
+	Node node;
+	public Node() {		
+	}
+}

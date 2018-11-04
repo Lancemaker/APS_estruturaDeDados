@@ -1,0 +1,15 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+
+public class UserInterface {
+	public static void main(String[] args) {
+		System.out.println("test");
+		String imagePath = "path/to/your/image.jpg";
+		try {
+			BufferedImage myPicture = ImageIO.read(new File(imagePath));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

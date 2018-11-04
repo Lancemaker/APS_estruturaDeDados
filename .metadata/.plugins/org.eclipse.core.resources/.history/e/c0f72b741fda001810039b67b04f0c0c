@@ -1,0 +1,10 @@
+
+public class Sprite {
+	int width;
+	int height;
+	int posX;
+	int posY;
+	public Sprite(*) {
+		
+	}
+}
