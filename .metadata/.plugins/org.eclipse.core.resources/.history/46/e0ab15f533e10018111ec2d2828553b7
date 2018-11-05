@@ -1,0 +1,26 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class UserInterface {
+	public static void main(String[] args) {				
+		String imagePath = "/home/lancemaker/Documents/Github/APS_estruturaDeDados/Animação/src/imagens/mario.png";
+		Sheet sheet = new Sheet(imagePath);
+		sheet.FillSheet(16, 1, 18, 36);
+		
+		
+		
+		
+		
+		JFrame janela = new JFrame("AnimaAe");
+		JLabel canvas = new JLabel();
+		canvas.setIcon(new ImageIcon(sheet.getSprite(1).getImage()) );		
+		janela.add(canvas);
+		janela.setSize(800, 600);
+		janela.setVisible(true);
+	}	
+}
