@@ -1,11 +1,23 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
 
 public class Sheet {
     private Node inicio, fim;
     private int quantidade;
-
-    public Sheet() {
+    String imagePath;
+    BufferedImage img;
+    
+    public Sheet(String imagePath) {
+    	this.imagePath=imagePath;
         inicio = fim = null;
         quantidade = 0;
+        try {
+			img = ImageIO.read(new File(imagePath));
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
     }
 
     public boolean isEmpty() {
@@ -68,4 +80,36 @@ public class Sheet {
         }
         return null;
     }
+    
+    public void FillSheet(int x,int y,int width,int height) {
+    	int qtd=0;
+    	 for(int i=0;i<y;i++) {
+    		 for(int j=0;j<x;j++) {
+    			System.out.println(i+" "+j);
+    			BufferedImage imagem = img.getSubimage(j*width, i*height, width, height);
+    			Sprite sprite = new Sprite(width,height,j*width,i*height,imagem);    			
+    			add(sprite,qtd);
+    			qtd++;
+    			
+    		 }    		 
+    	 }
+    	 System.out.println("total de imagens :" + qtd);
+    }
+    
+    public Sprite getSprite(int index) {
+    	int qtd =0;
+    	Node aux=null;
+    	if(!isEmpty()) {
+    	aux = inicio;
+    	while(qtd != index) {
+    		aux=aux.proximo;
+    		qtd++;
+    	}
+    	return aux.sprite;
+    	}
+    	else {
+    	return null;
+    	}    	
+    }   
+    
 }
